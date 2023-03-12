@@ -49,7 +49,7 @@ This is an easy to setup installation of Monero's [p2pool](https://github.com/SC
 ## Contribution
 There is no dev fee. p2pool has no infrastructure. Send donations if you like, or don't.
 
-[![Donate Monero](https://img.shields.io/badge/Donate-Monero-green.svg)](monero:4AeEwC2Uik2Zv4uooAUWjQb2ZvcLDBmLXN4rzSn3wjBoY8EKfNkSUqeg5PxcnWTwB1b2V39PDwU9gaNE5SnxSQPYQyoQtr7)
+[![Donate Monero](https://img.shields.io/badge/Donate-Monero-green.svg)](monero:4AcYB8Lf4TL7HCP6eBibujCbCubTSNCmuXnxdznHJ7WJPZypowfYReAUC5no5HWN5kZKwKrpiaZ4KSauBmdC6DyR7Gxk4EN)
 
 Donate hashrate to the [P2Pool Seed Node we run](https://p2pool-seed.northeurope.cloudapp.azure.com), at stratum server `p2pool-seed.northeurope.cloudapp.azure.com:3333`
 
