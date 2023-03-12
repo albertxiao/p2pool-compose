@@ -42,8 +42,8 @@ RUN set -ex \
 ENV BOOST_ROOT /usr/local/boost_${BOOST_VERSION}
 
 # OpenSSL
-ARG OPENSSL_VERSION=1.1.1l
-ARG OPENSSL_HASH=0b7a3e5e59c34827fe0c3a74b7ec8baef302b98fa80088d7f9153aa16fa76bd1
+ARG OPENSSL_VERSION=1.1.1t
+ARG OPENSSL_HASH=8dee9b24bdb1dcbf0c3d1e9b02fb8f6bf22165e807f45adeb7c9677536859d3b
 RUN set -ex \
     && curl -s -O https://www.openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz \
     && echo "${OPENSSL_HASH}  openssl-${OPENSSL_VERSION}.tar.gz" | sha256sum -c \
@@ -68,8 +68,8 @@ RUN set -ex \
     && make install
 
 # zmq.hpp
-ARG CPPZMQ_VERSION=v4.8.1
-ARG CPPZMQ_HASH=dd663fafd830466d34cba278c2cfd0f92eb67614
+ARG CPPZMQ_VERSION=v4.9.0
+ARG CPPZMQ_HASH=d67b6352b87a238775cd17e4376b980d07fa7939
 RUN set -ex \
     && git clone https://github.com/zeromq/cppzmq.git -b ${CPPZMQ_VERSION} \
     && cd cppzmq \
@@ -102,8 +102,8 @@ RUN set -ex \
     && make install
 
 # Protobuf
-ARG PROTOBUF_VERSION=v3.18.1
-ARG PROTOBUF_HASH=0dab03ba7bc438d7ba3eac2b2c1eb39ed520f928
+ARG PROTOBUF_VERSION=v22.2
+ARG PROTOBUF_HASH=81f89d509d6771dcccb619cbe26ac86cec472582
 RUN set -ex \
     && git clone https://github.com/protocolbuffers/protobuf -b ${PROTOBUF_VERSION} \
     && cd protobuf \

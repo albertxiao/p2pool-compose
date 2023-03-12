@@ -16,8 +16,8 @@ services:
       dockerfile: Dockerfile
       args:
         repo: https://github.com/SChernykh/p2pool
-        ref: 9a5be0a32117836d3adebdbc7befb3c0ea56c885
-    restart: always
+        ref: a76d8049c052c2087b56b4cdad976a132d54a2a8
+    restart: unless-stopped
     tty: true
     stdin_open: true
     read_only: true
@@ -28,7 +28,7 @@ services:
     depends_on:
       - monero
     volumes:
-      - p2pool:/p2pool/data:rw
+      - /data/dockervol/p2pool/data:/p2pool/data:rw
       - "${HUGEPAGES_MOUNT}:/dev/hugepages:rw"
     ports:
       - "${P2POOL_STRATUM_PORT}:${P2POOL_STRATUM_PORT}"
@@ -43,8 +43,8 @@ services:
       context: docker/monero
       dockerfile: Dockerfile
       args:
-        ref: 424e4de16b98506170db7b0d7d87a79ccf541744
-    restart: always
+        ref: 99be9a044f3854f339548e2d99c539c18d7b1b01
+    restart: unless-stopped
     read_only: true
     security_opt:
       - no-new-privileges:true
@@ -53,7 +53,7 @@ services:
     networks:
       - monero-pool
     volumes:
-      - monero:/var/monero:rw
+      - /data/dockervol/p2pool/monero:/var/monero:rw
       - "${HUGEPAGES_MOUNT}:/dev/hugepages:rw"
     ports:
       - "18080:18080"
